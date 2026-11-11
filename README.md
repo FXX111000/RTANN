@@ -322,4 +322,8 @@ at them.
 
 ## 11. License
 
-No license has been chosen yet for this repository.
+VecFS is a Linux kernel module and is released under the **GNU General Public License
+version 2** (GPL-2.0-only). See [LICENSE](LICENSE) for the full text.
+
+The kernel module already declares `MODULE_LICENSE("GPL")` in `core/vecfs_main.c`, in
+keeping with the licensing of the Linux kernel and its GPL-only exported symbols.
