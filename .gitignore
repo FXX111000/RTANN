@@ -1,0 +1,55 @@
+# ===== 内核模块编译产物 =====
+*.o
+*.o.cmd
+*.ko
+*.ko.cmd
+*.mod
+*.mod.c
+*.mod.o
+*.mod.o.cmd
+*.mod.cmd
+*.symvers
+*.order
+.Module.symvers.cmd
+.modules.order.cmd
+.module-common.o
+
+# 内核构建系统生成的隐藏文件（如 .foo.o.cmd）
+.*.o.cmd
+
+# ===== 编译生成的可执行文件 / 工具 =====
+tools/fsck.vecfs
+tools/mkfs.vecfs
+tools/vecfs-index
+tools/hnswlib-converter
+
+# ===== 测试输出 JSON =====
+tests/*.json
+
+# ===== Python 缓存 =====
+__pycache__/
+*.py[cod]
+
+# ===== 临时会话文件 =====
+*-this-session-is-being-continued-from-a-previous-c.txt
+
+# ===== 通用 =====
+*.a
+*.so
+*.dll
+*.exe
+*.dSYM/
+
+# ===== 评估结果输出（不提交） =====
+results/
+KVFS/
+RTANN_ATC/
+paper/
+semantic_validation/
+data/
+third_party/
+tests/vecfs_smoke.py
+tools/vecfs-embed-helper
+tests/mount_point/
+nohup.out
+task.sh

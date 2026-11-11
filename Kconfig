@@ -1,0 +1,21 @@
+config VECFS
+	tristate "VecFS vector file system"
+	depends on BLOCK
+	depends on X86_64
+	select CRC32
+	select CRC32_SLICEBY8
+	help
+	  VecFS is a block-device file system with a persistent HNSW
+	  secondary vector index.
+
+	  Each formatted VecFS instance has one global vector dimension,
+	  element type, distance type, and HNSW parameter set.
+
+config VECFS_AVX2
+	bool "Enable VecFS AVX2 distance implementation"
+	depends on VECFS
+	depends on X86_64
+	default y
+	help
+	  Build the AVX2 FP32 L2/IP distance implementation. Runtime CPU
+	  feature detection still decides whether it is used.
